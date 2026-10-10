@@ -1,0 +1,22 @@
+The Integrity Journey
+Copyright (c) 2026 Zeina Keisse. All rights reserved.
+
+This work was created as coursework at the University of British Columbia
+and is protected under UBC's copyright policies.
+
+Permitted without further permission:
+  - Viewing and using the published site for personal study.
+  - Linking to, or embedding, the published site in an educational context,
+    provided the author is credited and the content is not altered.
+
+Not permitted without the author's written permission:
+  - Reproducing, copying, or redistributing the source code, text, or design,
+    in whole or in part, in any form.
+  - Creating derivative works or adapted versions.
+  - Commercial use of any kind.
+
+Third-party material cited in the site remains the property of its respective
+copyright holders and is referenced under fair-dealing provisions for the
+purposes of education and criticism.
+
+For permission requests, please contact the author.
