@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>The Integrity Journey: From Assignment to Submission</title>
 <style>
@@ -229,21 +230,9 @@ details.about p{margin:.5rem 0}
   body{background:#fff;color:#000}
   .stage{display:none!important} .stage.active{display:block!important}
 }
-
-.post{padding:0;margin:0;border:0}
-.post .post-cta{font-family:inherit}
-.post .wrap{padding-top:.25rem}
-.post p{margin:0 0 1rem}
-.post .post-cta{font-weight:700;color:var(--muted);margin-bottom:1.5rem}
-.post-sep{border:0;height:6px;margin:0;background:var(--rule)}
-@media print{.post,.post-sep{display:none!important}}
 </style>
 </head>
 <body>
-
-
-<section class="post" id="post" aria-hidden="true"><hr class="post-sep"></section>
-<div id="siteTop"></div>
 
 <header class="map" aria-label="Journey map">
   <div class="wrap">
@@ -488,8 +477,7 @@ document.documentElement.classList.add('js');
   var SHORT = ['Start','Values','Research','Drafting','AI tools','Pressure','Choices','Submit','Completed'];
   var KEY = 'integrity-journey-v1';
   var state = {stage:0, reached:0, done:{}, name:''};
-  /* Discussion-board copy: always open at the Start screen with no saved progress. */
-  try { localStorage.removeItem(KEY); } catch(e){}
+  try { var s = JSON.parse(localStorage.getItem(KEY) || 'null'); if (s) state = Object.assign(state, s); } catch(e){}
   function save(){ try { localStorage.setItem(KEY, JSON.stringify(state)); } catch(e){} }
 
   /* ---- Map ---- */
@@ -541,8 +529,7 @@ document.documentElement.classList.add('js');
     updateNext();
     if (i === 8) drawCert();
     drawMap();
-    if (window.__ijBooted){ var post = document.getElementById('post'); window.scrollTo(0, post ? post.getBoundingClientRect().bottom + window.scrollY : 0); }
-    window.__ijBooted = true;
+    window.scrollTo(0, 0);
     var h = $('.stage.active h1, .stage.active h2'); if (h && fromButton){ h.setAttribute('tabindex','-1'); h.focus({preventScroll:true}); }
   }
   function updateNext(){
